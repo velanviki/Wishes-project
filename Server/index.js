@@ -22,8 +22,9 @@ app.use('/',(req,res) => {
 });
 
 const PORT = process.env.PORT || 8000;
+const CONNECTION_URL ="mongodb+srv://velan:Velandb321@cluster0.detsh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
- mongoose. connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+ mongoose. connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
 .then(() => app.listen(PORT, () => console.log(`Server Running on Port: ${PORT}`)))
 .catch((error) => console.log( error.message));
 

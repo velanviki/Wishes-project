@@ -13,7 +13,7 @@ import {useDispatch} from 'react-redux';
 import {useHistory} from 'react-router-dom';
 import {signup,signin} from '../../actions/auth';
 
-const initialState = {firstName:'', lastName:'', email:'', password:'', confirmPassword:''}
+const initialState = {firstName:'', lastName:'', email:'', password:'',}
 
 
 
