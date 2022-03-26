@@ -18,8 +18,8 @@ app.use('/posts', router);
 app.use('/user',userRoutes);
 
 app.use('/',(req,res) => {
-    res.send("Hello")
-})
+    res.send("Hello");
+});
 
 const PORT = process.env.PORT || 8000;
 
