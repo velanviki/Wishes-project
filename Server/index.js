@@ -21,7 +21,7 @@ app.use('/',(req,res) => {
     res.send("Hello");
 });
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 3000;
 const CONNECTION_URL ="mongodb+srv://velan:Velandb321@cluster0.detsh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
  mongoose. connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
