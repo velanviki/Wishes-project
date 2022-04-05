@@ -18,14 +18,14 @@ app.use('/posts', router);
 app.use('/user',userRoutes);
 
 app.use('/',(req,res) => {
-    res.send("Hello");
+    res.send("Hello world");
 });
 
 const PORT = process.env.PORT || 3000;
 const CONNECTION_URL ="mongodb+srv://velan:Velandb321@cluster0.detsh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
  mongoose. connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
-.then(() => app.listen(PORT, () => console.log(`Server Running on Port: ${PORT}`)))
+.then(() => app.listen(process.env.PORT||PORT, () => console.log(`Server Running on Port: ${PORT}`)))
 .catch((error) => console.log( error.message));
 
 // mongoose.set('useFindAndModify', false);
